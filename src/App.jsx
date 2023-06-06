@@ -1,10 +1,11 @@
 import React from 'react'
 import "./App.css"
+import HomeScreen from './components/HomeScreen'
 
 const App = () => {
   return (
-    <div>
-      hello
+    <div className='app'>
+      <HomeScreen />
     </div>
   )
 }
