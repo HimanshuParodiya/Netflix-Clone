@@ -29,7 +29,7 @@ const Banner = () => {
     return (
         <>
         <header className='banner' style={{
-            backgroundImage: `url("https://images.tmdb.org/t/p/original/${movie && `${movie?.backdrop_path}`}")`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie && `${movie?.backdrop_path}`}")`,
             backgroundPosition: "center center",
            
         }}>
