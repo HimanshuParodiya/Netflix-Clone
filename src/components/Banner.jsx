@@ -20,7 +20,6 @@ const Banner = () => {
         fetchData()
     },[])
 
-    console.log(movie);
 
     // Function if the lenth of text is more then show .....
     const truncate = (string, n) =>{
