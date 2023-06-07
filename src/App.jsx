@@ -6,15 +6,23 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Login from './components/Login';
 
 
 const App = () => {
+  const user = null;
   return (
     <div className='app'>
       <Router>
-        <Routes>
-          <Route exact path="/" element={<HomeScreen />} />
-        </Routes>
+        {
+          !user ? (
+            <Login />
+          ):(
+              <Routes>
+                <Route exact path="/" element={<HomeScreen />} />
+              </Routes>
+            )
+        }
       </Router>
     </div>
   )
