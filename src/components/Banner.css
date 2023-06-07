@@ -1,15 +1,21 @@
 .banner{
-    height: 448px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-image was getting cropped so i use below line  */
+    background-size: 100% 100%;
+    /* background-size: contain; */
+    /* background-size: cover; */
+    object-fit: cover;
+    object-position: center;
+    height: 70vh;
     position: relative;
     color: white;
-    object-fit: contain;
 }
 
 .banner_contents{
-    margin-left: 30px;
-    padding-top: 140px;
-    height: 200px;
-    border: 1px solid red;
+    margin-left: 70px;
+    padding-top: 350px;
+    height: 190px;
 }
 
 .banner_contents .banner_title{
