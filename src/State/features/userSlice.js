@@ -13,7 +13,7 @@ const initialState = {
 // userSlice is a slice of our store we can have so many slices 
 export const userSlice = createSlice({
   // we have user named state in this createSlice store 
-  name: 'userName',
+  name: 'user',
 
   // we have already initialize the state
   initialState,
