@@ -10,6 +10,7 @@ import Login from './components/Login';
 import { auth } from './firebase/firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './State/features/userSlice';
+import UserProfile from './components/UserProfile';
 
 
 const App = () => {
@@ -57,6 +58,7 @@ const App = () => {
           ) : (
             <Routes>
               <Route exact path="/" element={<HomeScreen />} />
+              <Route exact path="/profile" element={<UserProfile />} />
             </Routes>
           )
         }
