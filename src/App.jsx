@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Login from './components/Login';
+import WelcomePage from './components/WelcomePage';
 import { auth } from './firebase/firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './State/features/userSlice';
@@ -54,7 +54,7 @@ const App = () => {
       <Router>
         {
           !user ? (
-            <Login />
+            <WelcomePage />
           ) : (
             <Routes>
               <Route exact path="/" element={<HomeScreen />} />

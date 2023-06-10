@@ -1,41 +1,41 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 import "./Login.css"
-import logo from "../assets/logo.png"
-import SignIn from './SignIn';
+import { auth, signInWithEmailAndPassword } from '../firebase/firebase'
 
 const Login = () => {
-  const [isSignIn, setIsSignIn] = useState(false);
-  return (
-    <div className='loginScreen'>
-      <div className="loginScreen_background">
-        <img className='loginScreen_logo' src={logo} alt="" onClick={() => setIsSignIn(false)} />
-        <button className='loginScreen_button' onClick={() => setIsSignIn(true)}>Sign In</button>
-        <div className="loginScreen_gradient" />
-      </div>
+    // getting email
+    const emailRef = useRef(null)
+    const passwordRef = useRef(null)
 
-      <div className="loginScreen_body">
-        {
-          isSignIn ? (
-            <SignIn />
-          ) :
-            (
-              <>
-                <h1>Unlimited films, TV programmes and more.</h1>
-                <h2>Watch anywhere. Cancel at any time.</h2>
-                <h3>Ready to watch? Enter your email to create or restart your membership</h3>
-                <div className="loginScreen_input">
-                  <form >
-                    <input type="email" placeholder='Email Address' />
-                    <button className='loginScreen_getStarted' onClick={() => setIsSignIn(true)} >GET STARTED</button>
-                  </form>
-                </div>
-              </>
-            )
-        }
-
-      </div>
-    </div>
-  )
+    const handleLogin = (e) =>{
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, 
+            emailRef.current.value,
+            passwordRef.current.value
+            
+         ).then((authUser) =>{
+            console.log(authUser);
+        }).catch((error)=>{
+            alert(error.message)
+        })
+        
+    }
+    return (
+        <div className='signInScreen'>
+            <form >
+                <h1>LogIn To Your Account</h1>
+                <input ref={emailRef} type="email" placeholder='Email' />
+                <input ref={passwordRef} type="password" placeholder='Password' />
+                <button type="submit" onClick={handleLogin}>LogIn</button>
+                
+                <h4>
+                    <span className="signInScreen_gray">New to Netflix? </span>
+                    <span className="signInScreen_link">Click Sign Up now.</span>
+                     
+                </h4>
+            </form>
+        </div>
+    )
 }
 
 export default Login
