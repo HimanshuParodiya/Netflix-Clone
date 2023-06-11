@@ -111,7 +111,7 @@
     }
     
     .WelcomePage_body{
-        top: 30%;
+        top: 20%;
         padding: 15px;
     }
     
@@ -162,7 +162,7 @@
     }
     
     .WelcomePage_body{
-        top: 30%;
+        top: 20%;
         padding: 15px;
     }
     
@@ -204,4 +204,8 @@
         width: 70%;
         max-width: 500px;
     }   
+    .WelcomePage_body{
+        top: 25%;
+        padding: 15px;
+    }
 }
