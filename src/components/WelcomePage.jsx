@@ -24,8 +24,6 @@ const WelcomePage = () => {
 
   const handleLogin = () =>{
     setisLogin(true)
-
-
     setIsSignIn(false)
   }
 

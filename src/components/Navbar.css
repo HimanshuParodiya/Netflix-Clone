@@ -1,9 +1,9 @@
-.nav_contents{
+.nav_contents {
     display: flex;
     justify-content: space-between;
 }
 
-.nav{
+.nav {
     height: 70px;
     position: fixed;
     top: 0;
@@ -16,23 +16,106 @@
     transition: all 0.5s;
 }
 
-.nav_black{
+.nav_black {
     background-color: #111;
 }
-.nav_logo{
+
+.nav_logo {
     position: fixed;
-    top: 10px;
+    top: 0px;
     left: 0px;
-    width: 100px;
+    width: 150px;
     object-fit: contain;
     padding-left: 20px;
     cursor: pointer;
 }
 
-.nav_avatar{
+.nav_avatar {
     position: fixed;
     right: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer; 
-} 
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav_contents {
+        width: 100%;
+    }
+
+    .nav {
+        height: 40px;
+        padding: 10px;
+        /* Animation  */
+        transition-timing-function: ease-in;
+        transition: all 0.5s;
+    }
+
+
+    .nav_logo {
+        width: 100px;
+        padding-left: 10px;
+    }
+
+    .nav_avatar {
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .nav_contents {
+        width: 100%;
+    }
+
+    .nav {
+        height: 40px;
+        padding: 10px;
+        /* Animation  */
+        transition-timing-function: ease-in;
+        transition: all 0.5s;
+    }
+
+
+    .nav_logo {
+        width: 100px;
+        padding-left: 10px;
+    }
+
+    .nav_avatar {
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .nav_contents {
+        width: 100%;
+    }
+
+    .nav {
+        height: 50px;
+        padding: 15px;
+        /* Animation  */
+        transition-timing-function: ease-in;
+        transition: all 0.5s;
+    }
+
+
+    .nav_logo {
+        width: 120px;
+        padding-left: 15px;
+    }
+
+    .nav_avatar {
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {}

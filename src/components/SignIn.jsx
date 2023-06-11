@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import "./SignIn.css"
-import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '../firebase/firebase'
+import { auth, createUserWithEmailAndPassword } from '../firebase/firebase'
 
 const SignIn = () => {
     // getting email
@@ -8,14 +8,16 @@ const SignIn = () => {
     const passwordRef = useRef(null)
 
     const register = (e) =>{
-        // e.preventDefault();
+        e.preventDefault();
         createUserWithEmailAndPassword(auth,
             emailRef.current.value,
             passwordRef.current.value
         ).then((authUser) =>{
-            console.log(authUser);
+            // console.log(authUser);
         }).catch((error)=>{
             alert(error.message)
+            // console.log(error);
+
         })
     }
     

@@ -17,6 +17,7 @@ const App = () => {
   // get the user form the store
   const user = useSelector(selectUser);
   // console.log(user);
+  // console.log(user);1
 
   //use to give data form component to store
   const dispatch = useDispatch();

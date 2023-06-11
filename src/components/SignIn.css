@@ -51,3 +51,32 @@
     margin-top: 20px;
 
 }
+
+@media only screen and (max-width: 600px) {
+    .signInScreen{
+        max-width:400px ;
+    }
+    
+    
+    .signInScreen > form > h1{
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+    
+  
+    .signInScreen > form > h4{
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+
+    .signInScreen > form > input{
+        height: 40px;
+    }
+    
+    .signInScreen > form > button{
+        margin-top: 10px;
+    
+    }
+    
+}

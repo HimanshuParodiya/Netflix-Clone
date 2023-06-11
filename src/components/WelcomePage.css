@@ -97,3 +97,111 @@
     cursor: pointer;
 
 }
+
+@media only screen and (max-width: 600px) {
+    
+    .WelcomePage_logo{
+        width: 100px;
+        padding-left: 10px;
+        top: 10px;
+    }
+    
+    .WelcomePage_button{
+        font-size: 0.8rem;
+    }
+    
+    .WelcomePage_body{
+        top: 30%;
+        padding: 15px;
+    }
+    
+    .WelcomePage_body > h1{
+        font-size: 2.125rem;
+    }
+    
+    .WelcomePage_body > h2{
+        font-size: 1.125rem;
+        margin-bottom: 15px;
+    }
+    
+    .WelcomePage_body > h3{
+        font-size: 1rem;
+    }
+    
+    .WelcomePage_input{
+        margin: 15px;
+    }
+    
+    .WelcomePage_input form{
+        height: 40px;
+    }
+    
+    .WelcomePage_input > form > input{
+        width: 70%;
+        max-width: 300px;
+    }
+    
+    .WelcomePage_getStarted{
+        padding: 0 20px;
+        font-size: 0.8rem;
+    
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .WelcomePage_logo{
+        width: 100px;
+        padding-left: 10px;
+        top: 10px;
+    }
+    
+    .WelcomePage_button{
+        font-size: 0.8rem;
+    }
+    
+    .WelcomePage_body{
+        top: 30%;
+        padding: 15px;
+    }
+    
+    .WelcomePage_body > h1{
+        font-size: 2.5rem;
+    }
+    
+    .WelcomePage_body > h2{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .WelcomePage_body > h3{
+        font-size: 1.1rem;
+    }
+    
+    .WelcomePage_input{
+        margin: 18px;
+    }
+    
+    .WelcomePage_input form{
+        height: 50px;
+    }
+    
+    .WelcomePage_input > form > input{
+        width: 70%;
+        max-width: 400px;
+    }
+    
+    .WelcomePage_getStarted{
+        padding: 0 20px;
+        font-size: 0.8rem;
+    
+    }
+}
+
+@media (min-width: 769px) and (max-width: 998px) {
+    .WelcomePage_input > form > input{
+        width: 70%;
+        max-width: 500px;
+    }   
+}

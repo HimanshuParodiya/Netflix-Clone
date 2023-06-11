@@ -7,16 +7,17 @@ const Login = () => {
     const emailRef = useRef(null)
     const passwordRef = useRef(null)
 
-    const handleLogin = (e) =>{
+    const handleLoginPage = (e) =>{
         e.preventDefault();
         signInWithEmailAndPassword(auth, 
             emailRef.current.value,
             passwordRef.current.value
             
          ).then((authUser) =>{
-            console.log(authUser);
+            // console.log(authUser);
         }).catch((error)=>{
             alert(error.message)
+            // console.log(error);
         })
         
     }
@@ -26,7 +27,7 @@ const Login = () => {
                 <h1>LogIn To Your Account</h1>
                 <input ref={emailRef} type="email" placeholder='Email' />
                 <input ref={passwordRef} type="password" placeholder='Password' />
-                <button type="submit" onClick={handleLogin}>LogIn</button>
+                <button type="submit" onClick={handleLoginPage}>LogIn</button>
                 
                 <h4>
                     <span className="signInScreen_gray">New to Netflix? </span>
